@@ -11,6 +11,7 @@ import fr.fms.job.*;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.GradientPaint;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
@@ -72,27 +73,13 @@ public class Graphic extends JFrame implements ActionListener {
 				int width = Integer.parseInt(inputWidth);
 				job.addShape(job.shapes.size(),new Square(x,y,width));				
 			}
-			
-			this.pack();
-			
-
-			
-			
-			
-			// if(choice is ButtonCircle ) -> 		job.addShape(0, new Circle(x, y, radius));
-			// if(choice is ButtonSquare ) -> 		job.addShape(0, new Circle(x, y, w, l));
-			// frame.pack();
-
-	
-			
-			
-			
+						
+			// this.pack();
+			repaint();
 			
 		});
 		
 		setVisible(true);
-
-
 	}
 
 	@Override // le repère commence en haut à gauche (0,0)
@@ -107,22 +94,13 @@ public class Graphic extends JFrame implements ActionListener {
 		job.addShape(1, new Circle(15, new Point(100, 150)));
 		job.addShape(2, new Circle(30, 300, 300));
 		job.addShape(3, new Square(50, 200, 200));
-		job.addShape(4, new Square(65, 200, 50));
+		job.addShape(4, new Square(65, 200, 50));		
 		
-		
-		new Graphic();
-		
-
-		
+		new Graphic();		
 	}
 
 	@Override
-	public void actionPerformed(ActionEvent e) {
-		
-		
-		
-		// POur plus tardaddShape();
-		
+	public void actionPerformed(ActionEvent e) {		
 	}
 
 }
