@@ -27,7 +27,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-public class Graphic extends JFrame implements ActionListener {
+public class Graphic extends JFrame  {
 	
 	
 	private static final long serialVersionUID = 1L;
@@ -43,7 +43,6 @@ public class Graphic extends JFrame implements ActionListener {
 		
 		JButton button = new JButton("Ajouter ");
 		button.setSize(200,50);
-		// this.add((button), BorderLayout.SOUTH);
 		button.setVisible(true);
 		
 		JPanel panel = new JPanel();
@@ -73,8 +72,7 @@ public class Graphic extends JFrame implements ActionListener {
 				int width = Integer.parseInt(inputWidth);
 				job.addShape(job.shapes.size(),new Square(x,y,width));				
 			}
-						
-			// this.pack();
+			
 			repaint();
 			
 		});
@@ -99,8 +97,5 @@ public class Graphic extends JFrame implements ActionListener {
 		new Graphic();		
 	}
 
-	@Override
-	public void actionPerformed(ActionEvent e) {		
-	}
 
 }
